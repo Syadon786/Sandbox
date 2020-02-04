@@ -35,7 +35,7 @@ export default class Content {
         var name: string = "John"; // string variable
         var isUpdated: Boolean = true; // Boolean variable
         let proba: string = "alma";
-        const proba2: string = "alma";
+        const proba2: string = "alma2";
 
         res.write(`${age} ${name} ${isUpdated}`);
 
