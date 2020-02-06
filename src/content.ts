@@ -1,4 +1,5 @@
-﻿/* eslint-disable prefer-const */
+﻿/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable prefer-const */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable @typescript-eslint/no-inferrable-types */
@@ -62,8 +63,26 @@ export default class Content {
         for (var i = 0; i < sonData.length; i++) {
             res.write("\n\t" + sonData[i] + " ");
         }
-        /*  res.write("\nÁltalános adatok (enum): ");
-        res.write(accessories); */
+
+        res.write("\nÁltalános adatok (enum): ");
+        res.write("\n\t" + accessories.AutokSzama);
+        res.write("\n\t" + accessories.TelekSzam);
+        res.write("\n\t" + accessories.Lakcim);
+
+        res.write("\nAutó (union): ");
+        let autoAdatok: string | number;
+        autoAdatok = 123;
+        res.write("\n\t" + autoAdatok);
+        autoAdatok = "4 ajtó";
+        res.write("\n\t" + autoAdatok);
+        autoAdatok = "Piros";
+        res.write("\n\t" + autoAdatok);
+
+        let hazAdatok: any = 20;
+        res.write("\nHázadatok (any):");
+        res.write("\n\t Házszám: " + hazAdatok);
+        hazAdatok = "Temető utca";
+        res.write("\n\t Utcanév: " + hazAdatok);
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
