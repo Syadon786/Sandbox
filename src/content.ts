@@ -36,8 +36,8 @@ export default class Content {
         let isHungarian: Boolean = true;
         let favoruiteMovies: Array<string>;
         favoruiteMovies = ["Star Wars: New Hope", "Pasta vs Human right activist", "SHREK"];
-        let sonData: [number, string, boolean, number, string]; // declare tuple variable
-        sonData = [1, "Steve", true, 20, "Admin"]; // initialize tuple variable
+        let sonData: [string, number, boolean];
+        sonData = ["Kovács Bálint", 19, true];
 
         res.write("Név (String):");
         res.write(`${name}`);
@@ -48,8 +48,14 @@ export default class Content {
         res.write("\nMagyar (Boolean):");
         res.write(`${isHungarian}`);
 
+        res.write("\nKedvenc filmek (Array): ");
         for (var i = 0; i < favoruiteMovies.length; i++) {
-            res.write(favoruiteMovies[i]);
+            res.write("\n" + favoruiteMovies[i] + " ");
+        }
+
+        res.write("\nFiának adatai (Tuple): ");
+        for (var i = 0; i < sonData.length; i++) {
+            res.write("\n" + sonData[i] + " ");
         }
         // <---- Fejezd be a kódolást
 
