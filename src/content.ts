@@ -89,7 +89,6 @@ export default class Content {
         }
 
         let szobeszed: void = kialtas();
-        res.write(szobeszed);
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
