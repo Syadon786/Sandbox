@@ -38,6 +38,11 @@ export default class Content {
         favoruiteMovies = ["Star Wars: New Hope", "Pasta vs Human right activist", "SHREK"];
         let sonData: [string, number, boolean];
         sonData = ["Kovács Bálint", 19, true];
+        enum accessories {
+            AutokSzama = 2,
+            TelekSzam = 3,
+            Lakcim = "Gönyü xxxx"
+        }
 
         res.write("Név (String):");
         res.write(`${name}`);
@@ -50,13 +55,15 @@ export default class Content {
 
         res.write("\nKedvenc filmek (Array): ");
         for (var i = 0; i < favoruiteMovies.length; i++) {
-            res.write("\n" + favoruiteMovies[i] + " ");
+            res.write("\n\t" + favoruiteMovies[i] + " ");
         }
 
         res.write("\nFiának adatai (Tuple): ");
         for (var i = 0; i < sonData.length; i++) {
-            res.write("\n" + sonData[i] + " ");
+            res.write("\n\t" + sonData[i] + " ");
         }
+        res.write("\nÁltalános adatok (enum): ");
+        res.write(accessories);
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
