@@ -83,6 +83,13 @@ export default class Content {
         res.write("\n\t Házszám: " + hazAdatok);
         hazAdatok = "Temető utca";
         res.write("\n\t Utcanév: " + hazAdatok);
+
+        function kialtas(): void {
+            res.write("OSSIAAN!");
+        }
+
+        let szobeszed: void = kialtas();
+        res.write(szobeszed);
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
