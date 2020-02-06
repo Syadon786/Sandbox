@@ -85,7 +85,7 @@ export default class Content {
         res.write("\n\t Utcanév: " + hazAdatok);
 
         function kialtas(): void {
-            res.write("\n Kiáltása (void): OSSIAAN!");
+            res.write("\nKiáltása (void): OSSIAAN!");
         }
 
         kialtas();
