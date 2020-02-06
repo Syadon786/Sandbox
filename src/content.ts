@@ -85,10 +85,11 @@ export default class Content {
         res.write("\n\t Utcanév: " + hazAdatok);
 
         function kialtas(): void {
-            res.write("OSSIAAN!");
+            res.write("\n Kiáltása (void): OSSIAAN!");
         }
 
-        let szobeszed: void = kialtas();
+        kialtas();
+        //  let szobeszed: void = kialtas();
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
