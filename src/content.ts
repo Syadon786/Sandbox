@@ -62,8 +62,8 @@ export default class Content {
         for (var i = 0; i < sonData.length; i++) {
             res.write("\n\t" + sonData[i] + " ");
         }
-        res.write("\nÁltalános adatok (enum): ");
-        res.write(accessories);
+        /*  res.write("\nÁltalános adatok (enum): ");
+        res.write(accessories); */
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
