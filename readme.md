@@ -1,9 +1,11 @@
-#  VS Code + TypeScript + Node.js + GitHub + Heroku
+# VS Code + TypeScript + Node.js + GitHub + Heroku
 
-## Heroku teszt:
-https://jedlik-ts-template.herokuapp.com/ (Deploy menete: Deploy_on_Heroku.pdf)
+## Heroku:
 
-## A.  Fejlesztői környezet telepítése, beállítása
+https://bg-sandbox.herokuapp.com/
+
+## A. Fejlesztői környezet telepítése, beállítása
+
 1.  Node.js letöltése, telepítése:<br>
     https://nodejs.org/en/download/
 2.  Git for windows telepítése<br>
@@ -12,36 +14,37 @@ https://jedlik-ts-template.herokuapp.com/ (Deploy menete: Deploy_on_Heroku.pdf)
     https://code.visualstudio.com/Download
 4.  VSCode futtatása, Visual Studio Extensions telepítése: Ctrl-Shift-X<br>
     Kiterjesztés keresése, telepítés:<br>
-     - "Debugger for Chrome" (fontos, kell)
-     - "ESLint" (fontos, kell)
-     - "GitLens" (extra Git funkciók, opcionális a telepítése)
-     - "npm" (opcionális)
-     - "npm Intellisense" (opcionális)
-     - "Prettier" (fontos, kell)
-     - "Spell Right" (helyesírás ellenőrzés) (opcionális)
-     - "vscode-pdf" (opcionális)
-     - további kiterjesztések telepítése igény szerint
-5. Billentyűkombinációk beállítása:<br>
+    -   "Debugger for Chrome" (fontos, kell)
+    -   "ESLint" (fontos, kell)
+    -   "GitLens" (extra Git funkciók, opcionális a telepítése)
+    -   "npm" (opcionális)
+    -   "npm Intellisense" (opcionális)
+    -   "Prettier" (fontos, kell)
+    -   "Spell Right" (helyesírás ellenőrzés) (opcionális)
+    -   "vscode-pdf" (opcionális)
+    -   további kiterjesztések telepítése igény szerint
+5.  Billentyűkombinációk beállítása:<br>
     File\Preferences\Keyboard Shortcuts menüvel, vagy Ctrl-K majd Ctrl-S<br>
     Parancs keresése: gépeléssel<br>
     Hozzárendelés, módosítás: "ceruza" ikonra kattintással, törlés: Del bill.<br>
-    - gépel: "reopen" > parancs: "Reopen Closed Editor" > Remove Keybindings (vagy Del bill.)
-    - gépel: "test" > parancs: "Run Test Task" > hozzárendel: Ctrl-Shift-T
-    - gépel: "delete" > parancs: "Delete Line" > hozzárendel: Ctrl-L
-    - opcionális: további billentyűkombinációk hozzárendelése tetszés szerint
-6. A .vscode/settings.json állományban ("files.exclude" szekcióban) vezérelhető az<br>
-   Explorer ablakban megjelenő állományok/mappák láthatósága
-7. Opcionális: VSCode beállítása: lsd. az oldal végén
+    -   gépel: "reopen" > parancs: "Reopen Closed Editor" > Remove Keybindings (vagy Del bill.)
+    -   gépel: "test" > parancs: "Run Test Task" > hozzárendel: Ctrl-Shift-T
+    -   gépel: "delete" > parancs: "Delete Line" > hozzárendel: Ctrl-L
+    -   opcionális: további billentyűkombinációk hozzárendelése tetszés szerint
+6.  A .vscode/settings.json állományban ("files.exclude" szekcióban) vezérelhető az<br>
+    Explorer ablakban megjelenő állományok/mappák láthatósága
+7.  Opcionális: VSCode beállítása: lsd. az oldal végén
 
-## B.  Projekt előkészítése (inicializálása)
+## B. Projekt előkészítése (inicializálása)
+
 1.  https://github.com/nitslaszlo/JedlikTsTemplate.git<br>
-    - Ha nem akarsz klónozni:<br>
-      JedlikTsTemplate-master.zip letöltése, kicsomagolása a projekt szülőmappájába<br>
-      Vagy:<br>
-    - Repo klónozása<br>
-      Parancssor (cmd.exe)-> cd a projekt szülőmappája<br>
-      "git clone https://github.com/nitslaszlo/JedlikTsTemplate.git"<br>
-      Ha nem vagy társ-fejlesztő (contributor), akkor töröljed a .git mappát!
+    -   Ha nem akarsz klónozni:<br>
+        JedlikTsTemplate-master.zip letöltése, kicsomagolása a projekt szülőmappájába<br>
+        Vagy:<br>
+    -   Repo klónozása<br>
+        Parancssor (cmd.exe)-> cd a projekt szülőmappája<br>
+        "git clone https://github.com/nitslaszlo/JedlikTsTemplate.git"<br>
+        Ha nem vagy társ-fejlesztő (contributor), akkor töröljed a .git mappát!
 2.  Parancssorból (cmd.exe) belépés a JedlikTsTemplate mappába a "cd JedlikTsTemplate" paranccsal
 3.  Node.js lokális modul(ok) telepítése az "npm i" parancs futtatásával<br>
     (lsd.: package.json dependencies, devDependencies)
@@ -49,7 +52,8 @@ https://jedlik-ts-template.herokuapp.com/ (Deploy menete: Deploy_on_Heroku.pdf)
     Klónozott vagy átnevezett mappa helyi menüből: Open with Code,<br>
     vagy a VSCode indítása után File/Open Folder... menüpontba a project mappa megnyitása<br>
 
-## C.  Fejlesztés, tesztelés, kilépés, KILL
+## C. Fejlesztés, tesztelés, kilépés, KILL
+
 1.  VSCode indítása (utoljára megnyitott projektet visszatölti), vagy<br>
     Project mappa helyi menüből: Open with Code, vagy<br>
     VSCode indítása után File/Open Folder... menü pontba a project mappa megnyitása
@@ -66,31 +70,35 @@ https://jedlik-ts-template.herokuapp.com/ (Deploy menete: Deploy_on_Heroku.pdf)
     (böngészőt http://localhost:8080/ URL-el megnyitni/frissíteni (F5) -> elhelyezett töréspontoknál megáll, változók vizsgálata, lépésenkénti végrehajtás)
 
 ## D. Verziók és telepített node.js csomagok lekérdezése terminálablakból:
-- TypeScript: tsc -v
-- Node.js: node -v
-- git: git --version
-- npm: npm -v
-- telepített globális csomagok: npm -g ls --depth=0
-- telepített lokális csomagok: npm ls --depth=0
+
+-   TypeScript: tsc -v
+-   Node.js: node -v
+-   git: git --version
+-   npm: npm -v
+-   telepített globális csomagok: npm -g ls --depth=0
+-   telepített lokális csomagok: npm ls --depth=0
 
 ## E. Komponensek frissítése<br>
-- VSCode: Automatikus, balra lent a fogaskeréken jelzi, ha új verzió jön ki
-- VSCode kiterjesztések: Automatikus, balra az Extensions ikon jelzi, ha új verzió jön ki
-- TypeScript: npm update -g typescript
-- Node.js: npm install --save-dev @types/node
+
+-   VSCode: Automatikus, balra lent a fogaskeréken jelzi, ha új verzió jön ki
+-   VSCode kiterjesztések: Automatikus, balra az Extensions ikon jelzi, ha új verzió jön ki
+-   TypeScript: npm update -g typescript
+-   Node.js: npm install --save-dev @types/node
 
 ## F. Hasznos linkek:
-- https://www.typescriptlang.org/docs/home.html
-- https://www.tutorialspoint.com/typescript/
-- https://www.typescriptlang.org/docs/handbook/basic-types.html
-- https://code.visualstudio.com/docs
-- https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
-- https://git-scm.com/book/en/v2
-- https://heroku.com
-- https://github.com/Microsoft/vscode-tips-and-tricks
-- https://desoft.hu/downloads/git/git_v1.0.pdf
+
+-   https://www.typescriptlang.org/docs/home.html
+-   https://www.tutorialspoint.com/typescript/
+-   https://www.typescriptlang.org/docs/handbook/basic-types.html
+-   https://code.visualstudio.com/docs
+-   https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+-   https://git-scm.com/book/en/v2
+-   https://heroku.com
+-   https://github.com/Microsoft/vscode-tips-and-tricks
+-   https://desoft.hu/downloads/git/git_v1.0.pdf
 
 ## G. Verziókezelés Git-el VS Code-ban (nagyon alap, opcionális):
+
 1. GitHub account létrehozása:<br>
    https://github.com/<br>
    (nitslaszlo az account név a példában)
@@ -98,17 +106,17 @@ https://jedlik-ts-template.herokuapp.com/ (Deploy menete: Deploy_on_Heroku.pdf)
    pl.: GitHub asztali alkalmazással vagy github.com-on<br>
    (JedlikTsTemplate a repository neve a példában)
 3. Git konfigurálása CMD vagy "Git CMD" ablakból:
-   - git config --global user.name nitslaszlo
-   - git config --global user.email nitslaszlo@gmail.com
-   - git config --global credential.helper wincred
+    - git config --global user.name nitslaszlo
+    - git config --global user.email nitslaszlo@gmail.com
+    - git config --global credential.helper wincred
 4. Visual Studio Code indítása - project betöltése
 5. Ha van klónozott projektben .Git (rejtett!!!) mappa, akkor törölni kell
 6. Git inicializálása a 3. ("Y") ikonnal vagy Ctrl-Shift-G<br>
    majd "Initialize Repository"-ra kattint (felül a rombusz ikonnal)<br>
    majd meg kell adni a projekt könyvtárát a git-nek
 7. Remote repository megadása új terminál ablakból (Ctrl-Shift-ö), például:
-   - "git remote add origin https://github.com/nitslaszlo/JedlikTsTemplate.git"<br>
-   (A pontos parancsot a repo létrehozásakor kiírja a GitHub)   
+    - "git remote add origin https://github.com/nitslaszlo/JedlikTsTemplate.git"<br>
+      (A pontos parancsot a repo létrehozásakor kiírja a GitHub)
 8. ".gitignore" fájl szerkesztése/létrehozása (ezek a mappák/állományok nem lesznek feltöltve):<br>
    Ctrl-N -el új fájl létrehozása vagy meglévő szerkesztése<br>
    A fájl tartalma:<br>
@@ -125,10 +133,11 @@ https://jedlik-ts-template.herokuapp.com/ (Deploy menete: Deploy_on_Heroku.pdf)
 12. Változások szinkronizálása ("feltöltés")<br>
     Alul a státus sorban balra "Synchronize Changes" (felhő) ikonra kattint<br>
     Később fel- és letöltésnél egymást "kergető" nyilak lesznek.
-13. A "Would you like Code to periodically run 'git fetch'?"  kérdésére válaszoljunk "yes"-el<br>
+13. A "Would you like Code to periodically run 'git fetch'?" kérdésére válaszoljunk "yes"-el<br>
     ("git.autofetch": true lesz beállítva, alapértelmezésben 3 percenként ellenőrzi a változásokat)
 
 ## H. VS Code editor beállítása:
+
 1. Ctrl-Shift-P vagy F1
 2. "Preferen..." gépelése
 3. Preferences: "Open Workplace Settings" a projektben tárolt beállításokhoz (ez az erősebb) vagy<br>
@@ -137,9 +146,9 @@ https://jedlik-ts-template.herokuapp.com/ (Deploy menete: Deploy_on_Heroku.pdf)
    Konfig fájl user: c:/Users/UserName/AppData/Roaming/Code/User/settings.json
 
 ## I. LiveReload - Automatikus böngésző frissítés
+
 1. Telepítsed a LiveReload asztali alakalmazást: http://livereload.com/
 2. Telepítsed a LiveReload Chrome bővítményt:<br>
-    https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
+   https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
 3. Beállítások:<br>
-    https://www.logicbig.com/tutorials/misc/typescript/project-auto-refresh-with-live-reload.html
-
+   https://www.logicbig.com/tutorials/misc/typescript/project-auto-refresh-with-live-reload.html
