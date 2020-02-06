@@ -31,13 +31,17 @@ export default class Content {
         res.write("<body><form><pre>");
 
         // Kezd a kódolást innen -->
-        var age: number = 32; // number variable
-        var name: string = "John"; // string variable
+        var age: number = 42; // number variable
+        var name: string = "Kovács Tibor"; // string variable
         var isUpdated: Boolean = true; // Boolean variable
         let proba: string = "alma";
         const proba2: string = "alma2";
 
-        res.write(`${age} ${name} ${isUpdated}`);
+        res.write("Név (String):");
+        res.write(`${age}`);
+
+        res.write("\nÉletkor (Number):");
+        res.write(`${age}`);
 
         // <---- Fejezd be a kódolást
 
