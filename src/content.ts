@@ -31,18 +31,26 @@ export default class Content {
         res.write("<body><form><pre>");
 
         // Kezd a kódolást innen -->
-        var age: number = 42; // number variable
-        var name: string = "Kovács Tibor"; // string variable
-        var isUpdated: Boolean = true; // Boolean variable
-        let proba: string = "alma";
-        const proba2: string = "alma2";
+        let age: number = 42;
+        let name: string = "Kovács Tibor";
+        let isHungarian: Boolean = true;
+        let favoruiteMovies: Array<string>;
+        favoruiteMovies = ["Star Wars: New Hope", "Pasta vs Human right activist", "SHREK"];
+        let sonData: [number, string, boolean, number, string]; // declare tuple variable
+        sonData = [1, "Steve", true, 20, "Admin"]; // initialize tuple variable
 
         res.write("Név (String):");
-        res.write(`${age}`);
+        res.write(`${name}`);
 
         res.write("\nÉletkor (Number):");
         res.write(`${age}`);
 
+        res.write("\nMagyar (Boolean):");
+        res.write(`${isHungarian}`);
+
+        for (var i = 0; i < favoruiteMovies.length; i++) {
+            res.write(favoruiteMovies[i]);
+        }
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
